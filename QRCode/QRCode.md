@@ -16,7 +16,8 @@ QRCreatorCI.au3&nbsp;&nbsp;v 0.2</span>
 <tr><td>QRCreatorCI.au3</td><td>This is the Commandline Interface.<br />With the exception of HBITMAP generation, which is not required on the command line, you can perform all functions of the UDF to generate QR codes.</td></tr>
 </table>
 
-### QRCreator.au3 - functions
+### QRCreator.au3
+#### Functions
 <table style='font-family:"Courier New"'>
 <tr><td>_QR_generatePNG</td><td>Generates the QR-Code as PNG file for the passed text.</td></tr>
 <tr><td>_QR_generateBMP</td><td>Generates the QR-Code as BMP file for the passed text.</td></tr>
