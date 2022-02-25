@@ -30,13 +30,13 @@ QRCreatorCI.au3&nbsp;&nbsp;v 0.2</span>
 #### Used parameters
 
 <table style='font-family:"Courier New"'>
-<tr><td>\$_sText</td><td>The text to encode. Full unicode is supported.</td></tr>
-<tr><td>\$_sPathOut</td><td>ONLY: _QR_generatePNG und _QR_generateBMP<br />The full path of the file to create. If only a filename has passed the @ScriptDir will used.<br />Without a filename the default filename will used (QR_YYYYMMDD_hhmmss).<br />If the filename exists, it will get a suffix (1..n) until it's unique.</td></tr>
-<tr><td>\$_iMargin</td><td>The QR-Code margin in pixel.</td></tr>
-<tr><td>\$_iSizePt</td><td>Size of the points in the QR-Code (1-4, depends by the correction level)<br />If a wrong value is passed, it will corrected by the script.</td></tr>
-<tr><td>\$_iCorrLvl</td><td>The used correction level (0-3). Allows to read a QR-Code if some parts damaged.</td></tr>
-<tr><td>\$_iOutSize</td><td>ONLY: _QR_generatePNG und _QR_generateBMP<br />As a new feature you can pass a target size for created file.<br />The size of the file depends by used correction level and the size of created points.<br />If you pass a value for width (and so for heigth too), the default by the dll created file will resized for this size. If the passed size is to small it raises an error.</td></tr>
-<tr><td>\$_iScale</td><td>ONLY: _QR_copyToClipboard<br />Also new is the ability to scale up the QR-Code copied to clipboard. It's a factor for linear scaling, based on the default creation size by the dll call.</td></tr>
+<tr><td>$_sText</td><td>The text to encode. Full unicode is supported.</td></tr>
+<tr><td>$_sPathOut</td><td>ONLY: _QR_generatePNG und _QR_generateBMP<br />The full path of the file to create. If only a filename has passed the @ScriptDir will used.<br />Without a filename the default filename will used (QR_YYYYMMDD_hhmmss).<br />If the filename exists, it will get a suffix (1..n) until it's unique.</td></tr>
+<tr><td>$_iMargin</td><td>The QR-Code margin in pixel.</td></tr>
+<tr><td>$_iSizePt</td><td>Size of the points in the QR-Code (1-4, depends by the correction level)<br />If a wrong value is passed, it will corrected by the script.</td></tr>
+<tr><td>$_iCorrLvl</td><td>The used correction level (0-3). Allows to read a QR-Code if some parts damaged.</td></tr>
+<tr><td>$_iOutSize</td><td>ONLY: _QR_generatePNG und _QR_generateBMP<br />As a new feature you can pass a target size for created file.<br />The size of the file depends by used correction level and the size of created points.<br />If you pass a value for width (and so for heigth too), the default by the dll created file will resized for this size. If the passed size is to small it raises an error.</td></tr>
+<tr><td>$_iScale</td><td>ONLY: _QR_copyToClipboard<br />Also new is the ability to scale up the QR-Code copied to clipboard. It's a factor for linear scaling, based on the default creation size by the dll call.</td></tr>
 </table>
 
 ### QRCreatorUI.au3
@@ -79,19 +79,33 @@ comma separated string with:
 ### Gallery
 
 #### CI
-![textonly](/pic/CI_1_textonly.png)<br />
-![text_type](/pic/CI_2_text_type.png)<br />
-![types](/pic/CI_3_types.png)<br />
-![resize](/pic/CI_4_resize.png)<br />
-![clip](/pic/CI_5_clip.png)<br />
-![error](/pic/CI_6_error.png)<br />
+
+![textonly](pic/CI_1_textonly.png)<br /> 
+
+![text_type](pic/CI_2_text_type.png)<br />
+
+![types](pic/CI_3_types.png)<br />
+
+![resize](pic/CI_4_resize.png)<br />
+
+![clip](pic/CI_5_clip.png)<br />
+
+![error](pic/CI_6_error.png)<br />
 
 #### UI
-![creator](/pic/UI_1_creator.png)<br />
-![preview_scale1](/pic/UI_2_preview_scale1.png)<br />
-![preview_scale12](/pic/UI_3_preview_scale12.png)<br />
-![filesave](/pic/UI_4_filesave.png)<br />
-![resize_fail1](/pic/UI_5_resize_fail1.png)<br />
-![resize_fail2](/pic/UI_6_resize_fail2.png)<br />
-![resize](/pic/UI_7_resize.png)<br />
-![clipboard](/pic/UI_8_clipboard.png)<br />
+
+![creator](pic/UI_1_creator.png)<br />
+
+![preview_scale1](pic/UI_2_preview_scale1.png)<br />
+
+![preview_scale12](pic/UI_3_preview_scale12.png)<br />
+
+![filesave](pic/UI_4_filesave.png)<br />
+
+![resize_fail1](pic/UI_5_resize_fail1.png)<br />
+
+![resize_fail2](pic/UI_6_resize_fail2.png)<br />
+
+![resize](pic/UI_7_resize.png)<br />
+
+![clipboard](pic/UI_8_clipboard.png)<br />
