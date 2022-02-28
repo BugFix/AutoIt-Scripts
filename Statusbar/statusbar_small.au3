@@ -1,4 +1,4 @@
-﻿;-- TIME_STAMP   2022-02-28 11:44:58   v 0.2
+﻿;-- TIME_STAMP   2022-02-28 17:21:05   v 0.3
 #include-once
 #include <GDIPlus.au3>
 #include <WinAPISysWin.au3>
