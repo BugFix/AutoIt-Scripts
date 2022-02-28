@@ -33,10 +33,10 @@ v 0.3
 
 ### Gallery
 
-![bottom](pic/01_bottom.png)<br /><br />
+![bottom](pic/bottom.png)<br /><br />
 
-![top](pic/02_top.png)<br /><br />
+![top](pic/top.png)<br /><br />
 
-![alignment](pic/03_alignment.png)<br /><br />
+![alignment](pic/alignment.png)<br /><br />
 
-![colored](pic/04_colored.png)<br />
+![colored](pic/colored.png)
