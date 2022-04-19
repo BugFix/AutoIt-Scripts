@@ -31,17 +31,17 @@ Es kann selbstverständlich auch für jede Version eine eigene Startup-Datei ang
 Die `SciTE_Starter.au3` ist zu kompilieren und abzuspeichern - sinnvoll wäre sicher der Pfad `C:\PortableSciTE`.<br />
 Beim ersten Aufruf der `SciTEStarter` wird eine INI-Datei mit Pfaden zur installierten Standardversion und zu weiteren SciTE-Versionen im Dialog erstellt.<br />
 ![default](pic/01_Standardversion.png)<br />
-Für die Version kann ein Alias vergeben werden:
+Für die Version kann ein Alias vergeben werden:<br />
 ![alias](pic/02_Alias.png)<br />
-Es könnten sofort andere Versionen mit erfasst werden. (Wurde hier verneint)
+Es könnten sofort andere Versionen mit erfasst werden. (Wurde hier verneint)<br />
 ![other_ver](pic/03_AuswahlAndereVersion.png)<br />
-Die Startoberfläche mit dem ersten Eintrag wird angezeigt.
+Die Startoberfläche mit dem ersten Eintrag wird angezeigt.<br />
 ![gui](pic/04_GUI_1_Eintrag.png)<br />
-Weitere Einträge können hinzugefügt/entfernt werden mit dem Kontext-Menü.
+Weitere Einträge können hinzugefügt/entfernt werden mit dem Kontext-Menü.<br />
 ![context](pic/05_GUI_KontextMnu.png)<br />
-Für `Eintrag Neu` erscheint dann ein erneuter Auswahl- und Alias-Dialog.
+Für `Eintrag Neu` erscheint dann ein erneuter Auswahl- und Alias-Dialog.<br />
 ![new](pic/06_GUI_KontextNeu.png)<br />
-Um eine Version zu starten, wird diese in der Liste markiert (der Startpfad wird unterhalb der Liste angezeigt) und mit Klick auf den Start-Button ausgeführt.
+Um eine Version zu starten, wird diese in der Liste markiert (der Startpfad wird unterhalb der Liste angezeigt) und mit Klick auf den Start-Button ausgeführt.<br />
 ![start](pic/07_GUI_AuswahlStart.png)<br />
 
 Die erstellte INI-Datei sollte `nicht per Hand` bearbeitet werden, sondern ausschließlich über das integrierte Kontext-Menü. Ein Verschieben des Eintrages für die Standardinstallation (muss zwingend der erste Eintrag sein) wird so vermieden.
