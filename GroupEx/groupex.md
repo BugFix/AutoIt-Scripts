@@ -14,7 +14,8 @@
 <tr><td>_GuiCtrlGroup_SetState</td>
 <td>Changes the state of a _GuiCtrlGroup_Create() created control. ($GUI_SHOW, $GUI_HIDE, $GUI_ENABLE, $GUI_DISABLE)<br />An array of controls in the group can be passed, and their status will be set as well.</td></tr>
 </table></span>
-<span>See the ```GroupsEx_Example.au3``` file for how it is applied.</span>
+
+See the ```GroupsEx_Example.au3``` file for how it is applied.
 
 ### Flags
 <span><table style='font-family:"Courier New"'>
