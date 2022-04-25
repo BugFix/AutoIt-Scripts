@@ -513,4 +513,6 @@ Func __SystemGetWindowBorder(ByRef $_iTopBorder, ByRef $_iSideBorder)
         If IsArray($aRet) Then $aMetrics[$i][1] = $aRet[0]
     Next
     DllClose($dll)
-    $_iTopBorder  = $aMetrics[0][1] + $aMetrics[1][1] + $aMet
+    $_iTopBorder  = $aMetrics[0][1] + $aMetrics[1][1] + $aMetrics[2][1]
+    $_iSideBorder = $aMetrics[3][1] + $aMetrics[4][1]
+EndFunc  ;==>__SystemGetWindowBorder

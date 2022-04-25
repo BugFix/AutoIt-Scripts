@@ -13,3 +13,7 @@ Font and style can be set for the entire status bar.<br />
 #### SciTE Starter
 A tool for starting different SciTE versions, each with its own SciTEUser.properties file.<br />
 [README](SciTE_Starter/SciTE_Starter.md)
+
+##### GroupEx
+The ```GroupEx.au3``` can be used to create a custom group control. It consists of a set of labels. This allows an individual design of title, background and border or border parts.<br />
+[README](GroupEx/groupex.md)
