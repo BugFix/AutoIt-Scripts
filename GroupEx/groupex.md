@@ -39,10 +39,10 @@
 <tr><td><b>BACKGROUND COLOR GROUP</b></td><td></td></tr>
 <tr><td>$_GROUPBACKGROUND</td><td>Sets BG-color inside border area</td></tr>
 <tr><td><b>MOVE / SIZE THE GROUP</b></td><td></td></tr>
-<tr><td>$_GROUP_MOVE_ABS</td><td>Give param as array [x,y,width,height], values that should not change set to "\*". You can also give values as comma seperated string: "x,y,width,height".<br />y,width,height by default has value "\*", so you can omit them if not need to change. (values absolute in the child window)</td></tr>
+<tr><td>$_GROUP_MOVE_ABS</td><td>Give param as array [x,y,width,height], values that should not change set to '*'. You can also give values as comma seperated string: "x,y,width,height".<br />y,width,height by default has value '*', so you can omit them if not need to change. (values absolute in the child window)</td></tr>
 <tr><td>$_GROUP_MOVE_REL</td><td>Same as before, but given values relative to current position/size</td></tr>
 </table></span>
 
 ### Gallery
-![main](pic/1_main.png)<br />
+![main](pic/1_main.png)<br /><br />
 ![child](pic/2_child.png)
