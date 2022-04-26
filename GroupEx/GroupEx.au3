@@ -1,4 +1,4 @@
-﻿;-- TIME_STAMP   2022-04-25 18:58:22   v 0.14
+﻿;-- TIME_STAMP   2022-04-26 10:22:43   v 0.14
 
 #cs     GroupEx.au3
     You can create a group with:
@@ -21,7 +21,7 @@
 
 #cs     History
 v 0.14:
-    SCRIPT BREAKING CHANCE: The parents GUI no longer needs to be specified.
+    SCRIPT BREAKING CHANGE: The parents GUI no longer needs to be specified.
     changed     - The create function itself recognizes its parent handle.
     changed     - The measurement of the title dimension has been optimized.
     added       - _GuiCtrlGroup_Create() can specify the fontname and -size for the group title.
@@ -44,7 +44,7 @@ v 0.10:
     fixed       - Error while Disable/Enable (non clickable controls)
 
 v 0.8:
-    SCRIPT BREAKING CHANCE: Count and type of parameters has changed
+    SCRIPT BREAKING CHANGE: Count and type of parameters has changed
     added       - _GuiCtrlGroup_SetState()
                   Sets the state for the group (ENABLE/DISABLE/HIDE/SHOW) and optionally for controls within the group (passed as array).
                   With Disable the color for title text and group background can be passed in the Disable state.
@@ -59,7 +59,7 @@ v 0.7:
     fixed       - Bug while painting controls inside the group area outside the main GUI
 
 v 0.6:
-    SCRIPT BREAKING CHANCE: New parameter for "_GuiCtrlGroup_Create".
+    SCRIPT BREAKING CHANGE: New parameter for "_GuiCtrlGroup_Create".
     fixed       - Bug with using on multiple GUI.
 
 v 0.5:
