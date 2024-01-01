@@ -35,6 +35,7 @@ Um eine externe Steuerung vornehmen zu können, stellt SciTE als Schnittstelle d
 ## Bsp. für externen Zugriff
 ### Handle des aktiven SciTE Fensters abfragen
 <details><summary>AutoIt - _GetHwnd_SciTE</summary>
+
 ```autoit
 ;-- AutoIt --
 Func _GetHwnd_SciTE()
