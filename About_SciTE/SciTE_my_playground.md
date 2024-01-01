@@ -37,7 +37,6 @@ Um eine externe Steuerung vornehmen zu können, stellt SciTE als Schnittstelle d
 <details><summary>AutoIt - _GetHwnd_SciTE</summary>
 
 ```autoit
-;-- AutoIt --
 Func _GetHwnd_SciTE()
     Local $hScite = WinGetHandle('[ACTIVE]')
     If _WinAPI_GetClassName($hScite) = 'SciTEWindow' Then
