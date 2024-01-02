@@ -277,7 +277,7 @@ SendSciTE_Command("menucommand:" & $IDM_ENCODING_UCOOKIE)
 ; Ausgabe löschen (= Shift+F5)
 SendSciTE_Command("menucommand:" & $IDM_CLEAROUTPUT)
 
-; Öffnen des Suchen-Dialogs
+; Öffnen des Suchen-Dialogs (= Ctrl+F)
 SendSciTE_Command("menucommand:" & $IDM_FIND)
 
 #EndRegion - Command
