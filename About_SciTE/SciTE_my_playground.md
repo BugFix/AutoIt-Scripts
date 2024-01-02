@@ -87,19 +87,19 @@ Func SendSciTE_Command($_sCmd, $Wait_For_Return_Info=0)
     DllStructSetData($COPYDATA, 1, 1)
     DllStructSetData($COPYDATA, 2, StringLen($_sCmd) + 1)
     DllStructSetData($COPYDATA, 3, DllStructGetPtr($CmdStruct))
-	$gSciTECmd = ''
+    $gSciTECmd = ''
     DllCall('User32.dll', 'None', 'SendMessage', 'HWnd', $Scite_hwnd, _
             'Int', $WM_COPYDATA, 'HWnd', $My_Hwnd, _
             'Ptr', DllStructGetPtr($COPYDATA))
     GUIDelete($My_Hwnd)
-	If $Wait_For_Return_Info Then
-		Local $n = 0
-		While $gSciTECmd = '' Or $n < 10
-			Sleep(20)
-			$n += 1
-		WEnd
-	EndIf
-	Return $gSciTECmd
+    If $Wait_For_Return_Info Then
+        Local $n = 0
+        While $gSciTECmd = '' Or $n < 10
+            Sleep(20)
+            $n += 1
+        WEnd
+    EndIf
+    Return $gSciTECmd
 EndFunc   ;==>SendSciTE_Command
 
 Func MY_WM_COPYDATA($hWnd, $msg, $wParam, $lParam)
@@ -158,19 +158,19 @@ Func SendSciTE_Command($_sCmd, $Wait_For_Return_Info=0)
     DllStructSetData($COPYDATA, 1, 1)
     DllStructSetData($COPYDATA, 2, StringLen($_sCmd) + 1)
     DllStructSetData($COPYDATA, 3, DllStructGetPtr($CmdStruct))
-	$gSciTECmd = ''
+    $gSciTECmd = ''
     DllCall('User32.dll', 'None', 'SendMessage', 'HWnd', $Scite_hwnd, _
             'Int', $WM_COPYDATA, 'HWnd', $My_Hwnd, _
             'Ptr', DllStructGetPtr($COPYDATA))
     GUIDelete($My_Hwnd)
-	If $Wait_For_Return_Info Then
-		Local $n = 0
-		While $gSciTECmd = '' Or $n < 10
-			Sleep(20)
-			$n += 1
-		WEnd
-	EndIf
-	Return $gSciTECmd
+    If $Wait_For_Return_Info Then
+        Local $n = 0
+        While $gSciTECmd = '' Or $n < 10
+            Sleep(20)
+            $n += 1
+        WEnd
+    EndIf
+    Return $gSciTECmd
 EndFunc   ;==>SendSciTE_Command
 
 Func MY_WM_COPYDATA($hWnd, $msg, $wParam, $lParam)
