@@ -259,8 +259,8 @@ EndFunc
 </details>
 
 #### Menü Kommandos aufrufen
-In der [Scintilla-Doku](https://www.scintilla.org/CommandValues.html) ist eine Übersicht aller Menübefehle vorhanden. Ich habe diese für AutoIt als [SciTE_Constants.au3](https://github.com/BugFix/AutoIt-Scripts/blob/main/About_SciTE/SciTE_Constants.au3) erstellt.  
-Ein Menükommando wird mit `menucommand` und der entsprechenden Befehls-ID aufgerufen.  
+In der [Scintilla-Doku](https://www.scintilla.org/CommandValues.html) ist eine Übersicht aller Menübefehle vorhanden. Ich habe diese und alle weiteren SciTE-Konstanten für AutoIt als [SciTE_Constants.au3](https://github.com/BugFix/AutoIt-Scripts/blob/main/About_SciTE/SciTE_Constants.au3) erstellt.  
+Ein Menükommando wird mit `menucommand` und der entsprechenden Befehls-ID aufgerufen. Die Menü-IDs beginnen alle mit `$IDM_` 
 Viele Menübefehle finden sich auch in Funktionen der API wieder. Ob man dann lieber Menükommando oder API-Funktion verwendet ergibt sich meist aus dem Kontext.
 
 <details><summary>AutoIt - menucommand</summary>
@@ -276,6 +276,9 @@ SendSciTE_Command("menucommand:" & $IDM_ENCODING_UCOOKIE)
 
 ; Ausgabe löschen (= Shift+F5)
 SendSciTE_Command("menucommand:" & $IDM_CLEAROUTPUT)
+
+; Öffnen des Suchen-Dialogs
+SendSciTE_Command("menucommand:" & $IDM_FIND)
 
 #EndRegion - Command
 ```
