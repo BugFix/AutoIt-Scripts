@@ -23,7 +23,7 @@ Wie die Abbildung zeigt, besteht ein SciTE Fenster aus folgenden Klassen:
 </table>
 
 
-Die Menüleiste ist nicht über eine Windows Fensterklasse implementiert und dadurch nicht mit der WinAPI manipulierbar. Es lassen sich aber alle Menübefehle von extern per IPC aufrufen, darauf werde ich später eingehen. 
+Die Menüleiste ist nicht über eine Windows Fensterklasse implementiert und dadurch nicht mit der WinAPI manipulierbar. Es lassen sich aber alle Menübefehle von extern per IPC aufrufen, darauf werde ich [hier](#menü-kommandos-aufrufen) eingehen. 
 
 ## Wie kann ich SciTE extern steuern
 > Softwareentwicklung findet nicht nur auf der Ebene einer einzelnen Datei statt, die von SciTE bearbeitet wird. Ein Entwickler wird in der Regel an einer Gruppe von zusammenhängenden Dateien im Rahmen eines Projekts arbeiten. Man könnte SciTE wie andere Editoren mit einer Projektmanagerfunktionalität ausstatten, doch würde dies eine bestimmte Sichtweise auf die Verwaltung von Projekten einschließlich des Formats der Projektdateien vorgeben. Stattdessen verfügt SciTE über eine Schnittstelle, die von Projektmanagern oder ähnlichen Anwendungen genutzt werden kann, um SciTE zu steuern. Jede Anwendung, die SciTE steuert, wird als "Director" bezeichnet. [^2]
@@ -59,9 +59,9 @@ Func _GetHwndDirectorExtension()
     Local $PIDActive = WinGetProcess($hActive)
     Local $aExtension = WinList("DirectorExtension")
     Local $PIDExt
-    For $i = 1 To $aExtension[0][0]
-        $PIDExt = WinGetProcess($aExtension[$i][1])
-        If $PIDExt = $PIDActive Then Return $aExtension[$i][1]
+    For $i = 1 To $aExtension[0][1]
+        $PIDExt = WinGetProcess($aExtension[$i][2])
+        If $PIDExt = $PIDActive Then Return $aExtension[$i][2]
     Next
 EndFunc
 ```
@@ -139,9 +139,9 @@ Func _GetHwndDirectorExtension()
 	Local $PIDActive = WinGetProcess($hActive)
 	Local $aExtension = WinList("DirectorExtension")
 	Local $PIDExt
-	For $i = 1 To $aExtension[0][0]
-		$PIDExt = WinGetProcess($aExtension[$i][1])
-		If $PIDExt = $PIDActive Then Return $aExtension[$i][1]
+	For $i = 1 To $aExtension[0][1]
+		$PIDExt = WinGetProcess($aExtension[$i][2])
+		If $PIDExt = $PIDActive Then Return $aExtension[$i][2]
 	Next
 EndFunc
 
@@ -225,6 +225,7 @@ EndFunc
 ##### Der Befehl `extender`
 
 Das wohl mächtigste Kommando ist `extender`. Hiermit erlange ich vollen Zugriff auf die Lua-basierte [Scintilla-API](https://www.scintilla.org/PaneAPI.html).  
+Die Funktionen/Properties aus der API sind weitestgehend sowohl für die `editor` als auch `output` Pane verwendbar, unterscheiden sich dann nur im Präfix (editor/output).   
 
 Damit lassen sich einzelne Befehlszeilen, Funktionen oder auch kpl. Skripte ausführen.
 Per Default können aber hier keine Ergebniswerte zurückgegeben werden, da die Ausführung in einem separaten Prozeß stattfindet. Ein kleiner Kniff hilft hier: Das Ergebnis wird in eine eigene Property, z.B. *extender.result* geschrieben und diese Property kann dann ganz normal abgefragt werden.
@@ -252,6 +253,29 @@ Func _GetExtenderResult()
     SendSciTE_Command("askproperty:extender.result")
     Return StringTrimLeft($gSciTECmd,StringInStr($gSciTECmd, ':', 1, 4))
 EndFunc
+
+#EndRegion - Command
+```
+</details>
+
+#### Menü Kommandos aufrufen
+In der [Scintilla-Doku](https://www.scintilla.org/CommandValues.html) ist eine Übersicht aller Menübefehle vorhanden. Ich habe diese für AutoIt als [SciTE_Constants.au3](https://github.com/BugFix/AutoIt-Scripts/blob/main/About_SciTE/SciTE_Constants.au3) erstellt.  
+Ein Menükommando wird mit `menucommand` und der entsprechenden Befehls-ID aufgerufen.  
+Viele Menübefehle finden sich auch in Funktionen der API wieder. Ob man dann lieber Menükommando oder API-Funktion verwendet ergibt sich meist aus dem Kontext.
+
+<details><summary>AutoIt - menucommand</summary>
+
+```autoit
+#Region - Command
+
+; Neuen leeren Tab im Editor öffnen (= Ctrl+N)
+SendSciTE_Command("menucommand:" & $IDM_NEW)
+
+; Datei als UTF8 (ohne BOM) kodieren
+SendSciTE_Command("menucommand:" & $IDM_ENCODING_UCOOKIE)
+
+; Ausgabe löschen (= Shift+F5)
+SendSciTE_Command("menucommand:" & $IDM_CLEAROUTPUT)
 
 #EndRegion - Command
 ```
